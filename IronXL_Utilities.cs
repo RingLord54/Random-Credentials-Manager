@@ -10,13 +10,18 @@ namespace Random_Credentials_Generator
     public class IronXL_Utilities
     {
 
+
+
         /// <summary>
         /// The purpose of this function is to take an integer parameter which should
         /// either be 1 or 0 and will then return the cell range address to use to search 
         /// through the excel workbook sheet with. 
         /// </summary>
         /// <param name="column">Column's index position within the Excel Spreadsheet (A = 0, B = 1)</param>
-        /// <returns>The cell range address</returns>
+        /// <returns>
+        /// Successful - The cell range address<br></br>
+        /// Unsuccessful - An error string value used for error checking
+        /// </returns>
         public static string GetAddressRange(int column)
         {
             // Will store the Column letter
@@ -37,6 +42,13 @@ namespace Random_Credentials_Generator
         }
 
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sheet"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public static string GetBlankCell(WorkSheet sheet, int column)
         {
             String cellBlank = "";
