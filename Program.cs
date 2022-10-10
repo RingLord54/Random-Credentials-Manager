@@ -11,7 +11,10 @@ namespace Random_Credentials_Generator
     {
         public static void Main(string[] args)
         {
+            // Fetches the Excel workbook called "Names.xlsx" from the local files
             WorkBook workbook = WorkBook.Load("Names.xlsx");
+
+            // Fetches the Excel spreadsheet called "Sheet1" within the workbook
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
 
             Console.WriteLine("Name Generator Application");
@@ -25,8 +28,6 @@ namespace Random_Credentials_Generator
 
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("Thank you for using the Name Generator Application!");
-
-            //IronXL_Utilities.AddName(workbook, sheet, "Bonny", 1);
         }
     }
 }

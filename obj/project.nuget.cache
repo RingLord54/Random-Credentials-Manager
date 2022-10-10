@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l07W1uz3nk6eMOvCQzu07PP77Wyfez4zVh75rRVPSyvJlLAPa68Q8f00Dw9fIY2EQkBeYJGtdKSM98u3+Aog+g==",
+  "dgSpecHash": "hABu6tVc1W+3Xc2A7e1oJ6TMdSNgjrNP351L1A+EtQ7isuJI7FOZq8SPHvn3ySxdZdtEy2vkoAbC6eikRbPNYw==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\C# Projects\\Challenges\\Random Credentials Generator\\Random Credentials Generator.csproj",
+  "projectFilePath": "D:\\Programming\\C# Projects\\Random-Credentials-Manager\\Random Credentials Generator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\ironsoftware.system.drawing\\2022.9.8843\\ironsoftware.system.drawing.2022.9.8843.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\ironxl.excel\\2022.9.9454\\ironxl.excel.2022.9.9454.nupkg.sha512",
