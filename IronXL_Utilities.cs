@@ -10,17 +10,29 @@ namespace Random_Credentials_Generator
     public class IronXL_Utilities
     {
 
-
+        /// <summary>
+        /// The purpose of this function is to take an integer parameter which should
+        /// either be 1 or 0 and will then return the cell range address to use to search 
+        /// through the excel workbook sheet with. 
+        /// </summary>
+        /// <param name="column">Column's index position within the Excel Spreadsheet (A = 0, B = 1)</param>
+        /// <returns>The cell range address</returns>
         public static string GetAddressRange(int column)
         {
-            String value = "";
+            // Will store the Column letter
+            String letter;
             switch (column)
             {
-                case 0: value = "A"; break;
-                case 1: value = "B"; break;
+                case 0: letter = "A"; break;
+                case 1: letter = "B"; break; 
+
+                // Return error string
+                // This will be looked for to ensure no errors have occured during this process
                 default: return "Failed Lookup";
             }
-            String address = value + "2:" + value + "1000";
+
+            // String Address is formatted with the letter value
+            String address = letter + "2:" + letter + "1000";
             return address;
         }
 
@@ -29,7 +41,6 @@ namespace Random_Credentials_Generator
         {
             String cellBlank = "";
             String address = GetAddressRange(column);
-
             if (address != "Failed Lookup")
             {
                 foreach (var cell in sheet[address])
@@ -43,7 +54,6 @@ namespace Random_Credentials_Generator
                 return cellBlank;
             }
             return "Failed Lookup";
-
         }
 
 
