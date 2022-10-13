@@ -17,17 +17,37 @@ namespace Random_Credentials_Generator
             // Fetches the Excel spreadsheet called "Sheet1" within the workbook
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
 
-            Console.WriteLine("Name Generator Application");
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("\nWelcome to the Name Generator Application!\n");
-            Console.Write("Would you like to:\n- Add a name to the list of names that can be selected (Enter 0)\n- Randomly Generate a Name (Enter 1)\n");
-            Console.Write("\nInput: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            // Menu Title
+            String title = "Random Credentials Generator";
 
-            Console.WriteLine("\nYour choice: " + num + "\n");
+            // Menu Options
+            String[] options =
+            {
+                "Add Name to the Names Excel Spreadsheet",
+                "Generate Random Credentials",
+                "Exit Application"
+            };
 
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("Thank you for using the Name Generator Application!");
+            // Will store the User's selection on the menu
+            int choice;
+
+            // Create Menu Object instance
+            Menu menu = new Menu(title, options);
+
+            // Keep going until the User wishes to close the application
+            do
+            {
+                choice = menu.GetUserChoice();
+                if (choice == options.Length)
+                {
+                    break;
+                }
+                Console.WriteLine("\nSelection made: " + choice + "\n");
+            } while (true);
+
+            // Close Application
+            Console.WriteLine("\nExiting Application...\n");
+            Console.WriteLine("Thank you for using the Random Credentials Generator");
         }
     }
 }

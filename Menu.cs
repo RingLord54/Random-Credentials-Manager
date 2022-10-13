@@ -62,21 +62,23 @@ namespace Random_Credentials_Generator
         {
             int value = 0;
             Display();
-            do {
-
+            do 
+            {
                 // Try to get a valid user selection
-                try {
-                    Console.WriteLine("Enter Selection: ");
+                try 
+                {
+                    Console.Write("Enter Selection: ");
                     value = Convert.ToInt32(Console.ReadLine());
 
                     // If the entered value is valid break from the selection loop
                     break;
                 }
                 // If the input isn't an integer value
-                catch(Exception ex) {
-
+                catch(Exception ex) 
+                {
                     // Display a message notifying the User of what went wrong
-                    Console.WriteLine("Invalid selection entered. Please try again.");
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Invalid selection entered. Please try again.\n");
                 }
             // Keep going until a valid selection is made by the user
             } while (true);
