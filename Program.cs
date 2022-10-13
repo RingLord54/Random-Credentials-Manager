@@ -42,12 +42,32 @@ namespace Random_Credentials_Generator
                 {
                     break;
                 }
-                Console.WriteLine("\nSelection made: " + choice + "\n");
+                ProcessChoice(choice);
             } while (true);
 
             // Close Application
             Console.WriteLine("\nExiting Application...\n");
             Console.WriteLine("Thank you for using the Random Credentials Generator");
+        }
+
+        private static void ProcessChoice(int choice)
+        {
+            switch (choice)
+            {
+                case 1: AddFullName(); break;
+                case 2: GenerateCredentials(); break;
+                default: Console.WriteLine("Invalid Menu Option Selected. Please try again.\n"); break;
+            }
+        }
+
+        public static void AddFullName()
+        {
+            Console.WriteLine("Full Name Added\n");
+        }
+
+        public static void GenerateCredentials()
+        {
+            Console.WriteLine("Generating Credentials\n");
         }
     }
 }
